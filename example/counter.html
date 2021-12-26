@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <title>Counter</title>
+
+  <link rel=preload href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" as=style>
+  <link rel=preload href="https://fonts.gstatic.com/s/pacifico/v17/FwZY7-Qmy14u9lezJ-6H6MmBp0u-.woff2" as=font type=font/woff2 crossorigin>
+
+  <style>
+    #counter {
+      --font-family: Pacifico;
+      --font-size: 1rem;
+      font-family: var(--font-family);
+      font-size: var(--font-size);
+    }
+  </style>
+</head>
+
+<body>
+  <div id=counter></div>
+
+  <script type=module src=counter.js></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+name: Build
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Sources
+      uses: actions/checkout@v2
+    - name: Install Node
+      uses: actions/setup-node@v2
+      with:
+        node-version: 'lts/*'
+        registry-url: 'https://registry.npmjs.org'
+    - name: Install and Build
+      uses: pnpm/action-setup@v2
+      with:
+        version: '>=6'
+        run_install: |
+          - args: [--frozen-lockfile, --no-verify-store-integrity]
