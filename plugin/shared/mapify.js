@@ -20,7 +20,7 @@ export default function mapifyMemo(from, to, source) {
   map.addMapping({
     source: from,
     original: { line: 1, column: 0 },
-    generated: { line: 1, column: 16 }
+    generated: { line: 1, column: 15 }
   })
   let { lineCount, lastLineLen } = measureSource(source)
   map.addMapping({
