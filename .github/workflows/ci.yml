@@ -16,8 +16,4 @@ jobs:
         node-version: 'lts/*'
         registry-url: 'https://registry.npmjs.org'
     - name: Install and Build
-      uses: pnpm/action-setup@v2
-      with:
-        version: '>=6'
-        run_install: |
-          - args: [--frozen-lockfile, --no-verify-store-integrity]
+      run: npm ci
